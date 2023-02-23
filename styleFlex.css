@@ -2,11 +2,45 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    min-width: 375px;
 }
 .container {
     max-width: 1180px;
     margin: 0 auto;
 }
+@media (max-width: 1200px) {
+    .container {
+        max-width: 970px;
+    }
+}
+@media (max-width: 992px) {
+    .container {
+        max-width: 750px;
+        padding: 0 10px;
+    }
+}
+@media (max-width: 767px) {
+    .container {
+        max-width: none;
+        margin: 0 15px;
+    }
+    .what__row {
+        flex-direction: column;
+    }
+    .what__img {
+        flex: 1 0 auto;
+        margin: 0 auto;
+        margin-bottom: -50px;
+
+        
+    }
+    .hi__body{
+        margin: -50px 0 0 0;
+    }
+    
+   
+}
+
 .wrapper {
     min-height: 100%;
     overflow: hidden;
@@ -26,10 +60,11 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 0 18px;
 }
 .hi__body {
     color: #fff;
-    padding: 40px 0;
+    padding: 40px 10px;
 }
 .hi__title {
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 00.3px);
@@ -40,9 +75,41 @@ body {
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 00.3px);
     font-size: 16px;
     line-height: 22px;
+    padding-right: 15px;
 }
 .hi__image {
 }
+@media (max-width: 768px) {
+    .hi__row {
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-top: -30px;
+        
+    }
+    
+    #imgFirst {
+        width: 380px;
+        height: 340px;
+    }
+    .hi__description {
+        margin: 0 auto;
+        font-size: 26px;
+        line-height: 30px;
+        
+    }
+    .hi__title {
+        text-align: center;
+       
+    }
+    .hi__body {
+        display: flex;
+        flex-direction: column;
+        margin: 0 -20px;
+       
+    }
+    
+}
+
 .footer {
     background-color: #a5bcdf;
 }
@@ -91,11 +158,29 @@ body {
     margin-top: -8px;
 }
 
-.what__text {
+@media(max-width:767px){
+     
+    h2 {
+        font-size: 38px;
+        text-align: center;
+        color: #000;
+        margin: 25px 0;
+    }
+    p{
+        font-size: 22px;
+        line-height: 30px;
+        margin: 10px -30px;
+
+
+    }
+    .what__title{
+        font-size: 38px;
+        text-align: center;
+    }
 }
 .what__text p {
     color: #445161;
-    line-height: 18px;
+    line-height: 25px;
 }
 #img2 {
     width: 330px;
@@ -109,6 +194,7 @@ h2 {
     font-size: 20px;
     line-height: 26px;
     color: #000;
+    margin: 20px 0;
 }
 
 .item {
@@ -132,6 +218,21 @@ h2 {
     flex-wrap: wrap;
     margin: 0 -10px;
 }
+@media (max-width: 580px) {
+    .item__row {
+        flex-direction: column;
+    }
+    .item__image {
+        flex: 1 0 auto;
+        margin: 0 auto;
+    }
+    .item__body {
+        flex: 1 1 auto;
+        margin: 50px 20px 0 20px;
+    }
+   
+}
+
 .columns__column {
     padding: 0 10px;
     flex: 0 1 50%;
@@ -163,6 +264,27 @@ h2 {
     letter-spacing: 0.3px;
     line-height: 16px;
 }
+@media (max-width: 1050px) {
+    .columns__row {
+        flex-direction: column;
+    }
+
+    .container {
+        max-width: none;
+    }
+
+    .item__text {
+        font-size: 26px;
+        line-height: normal;
+    }
+    .item__body {
+        padding: 10px 20px 30px 20px;
+    }
+    .item__title {
+        font-size: 39px;
+        margin-top: -15px;
+    }
+}
 
 .vertical {
     display: flex;
@@ -180,11 +302,25 @@ h2 {
     display: flex;
     margin: 0 -22.5px;
 }
+@media (max-width: 920px) {
+    .vertical__row {
+        flex-direction: column;
+        max-width: none;
+    }
+
+    .vertical__column {
+        flex: 1 0 100%;
+        flex-direction: column;
+        margin: 20px 0;
+        max-width: none;
+    }
+    
+}
+
 .vertical__column {
     flex: 0 1 33.333%;
     padding: 0 22.5px;
     display: flex;
-    
 }
 .vertical__item {
     background-color: #e3f4fd;
@@ -225,4 +361,34 @@ h2 {
     margin: 0 20px;
     line-height: 40px;
     border-radius: 5px;
+}
+@media (max-width: 767px) {
+    .vertical__subtitle {
+        font-size: 26px;
+        line-height: 30px;
+    }
+    .vertical__label {
+        font-size: 26px;
+        line-height: 30px;
+    }
+
+    .vertical__text {
+        font-size: 26px;
+        line-height: 30px;
+    }
+    .vertical__btn {
+        font-size: 26px;
+        
+        padding-top: 5px;
+    }
+    .footer__text{
+        font-size: 18px;
+        line-height: 25px;
+        
+    }
+    .footer-row{
+        margin: 25px 20px;
+        padding: 0 22px;
+
+    }
 }
